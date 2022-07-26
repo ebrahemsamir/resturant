@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.main-title h4 {
+    font-family: 'Water Brush', cursive;
+}
+
+.main-title h4::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+nav {
+    z-index: 2;
+}
+
+nav .active {
+    color: #9a8311 !important;
+}
+
+nav a:hover {
+    color: #ecec03 !important;
+}
+
+nav .navbar-toggler {
+    background-color: white;
+    z-index: 100;
+}
+
+nav .navbar-toggler:is(:hover, :focus) {
+    outline: none;
+    border: none;
+}
+
+.portfolio {
+    background-image: url("../images/part1.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+.portfolio .text {
+    transform: translate(-50%, -50%);
+}
+
+.portfolio .text h2 {
+    letter-spacing: 6px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    transition: 0.5s;
+    color: transparent;
+    animation: wordfill .5s 2s forwards;
+    z-index: 5;
+}
+
+@keyframes wordfill {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.portfolio .text h2::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 0%;
+    top: 0;
+    height: 100%;
+    background-color: #9a8311;
+    animation: textco 1s 1s ease-in-out;
+}
+
+@keyframes textco {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+
+.about {
+    background-color: #962323;
+    padding: 100px 0;
+}
+
+.about p {
+    max-width: 500px;
+}
+
+.recipes {
+    background-image: url("../images/part3.png");
+    padding: 100px 0;
+}
+
+.recipes .main-title h4::after {
+    background-color: #962323;
+    background-size: cover;
+}
+
+.recipes .main-title h4 {
+    word-spacing: 10px;
+}
+
+.recipes .main-title p {
+    max-width: 500px;
+}
+
+.menu {
+    padding: 100px 0;
+}
+
+.menu h4 span {
+    color: #c8235d;
+}
+
+.menu .main-title h4::after {
+    background-color: #962323;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    color: #ecec03;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    background-color: #ecec03;
+}
+
+.footer {
+    background-color: #25262a;
+}
+
+.footer h4 {
+    letter-spacing: 4px;
+}
+
+li {
+    list-style: none;
+}
+
+.footer svg {
+    color: #c8235d;
+}
+
+footer {
+    background-color: #16171b;
+}
+
+footer p {
+    letter-spacing: 2px;
+}
+
+.footer li,
+footer li {
+    cursor: pointer;
+}
+
+.footer li:hover,
+footer li:hover {
+    color: white;
+}
